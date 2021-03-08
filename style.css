@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+nav a{
+    text-decoration: none;
+    color: dimgrey;
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+
+}
+
+.navbar a::after{
+    content: '';
+    width: 0%;
+    border-bottom: 2px solid #333;
+    display: block;
+    margin: auto;
+    transition: all ease-in-out 0.2s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+.mobile-menu{
+    height: 2.5rem;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav-active{
+    box-shadow: 2px 5px 10px #333;
+    transition: all ease-in-out 0.4s;
+}
+.bar{
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    border-radius: 6px;
+    transition: all ease-in-out 0.4s;
+}
+
+.bar1-animation{  
+    transform: translate(-2px,1.05rem)rotate(45deg);
+}
+.bar2-animation{
+    opacity: 0;
+}
+.bar3-animation{
+    transform: translate(-2px,-1.05rem)rotate(-45deg);
+}
+
+.todo{
+    margin: 5rem auto;
+    width: 55vw;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.todo input[type='text']{
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: beige;
+    border: none;
+    outline: none;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+
+}
+.todo input[type='submit']{
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(92, 183, 92);
+    font-weight: 900;
+    outline: none;
+    border: none;
+    height: 2rem;
+    border-radius: 1rem;    
+    text-align: center;
+    transition: all ease-in-out 0.2s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+}
+.todo input[type='submit']:hover{
+    background-color: rgb(112, 203, 112);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+
+}
+.todo-list{
+    width: 55vw;
+    height: 30vh;
+    border-radius: 1rem;
+    margin: 0 auto;
+    background-color: beige;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.todobody{
+    height: 30px;
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+}
+.tododone{
+    width: 6rem;
+    height: 30px;
+    background-color: rosybrown;
+    position: absolute;
+    right: 7.4rem;
+    border-radius: 15px;
+    border: none;
+}
+.tododelete{
+    width: 6rem;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+    border-radius: 15px;
+    border: none;
+}
+
+
+
+@media (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        width: 50vw;
+        height: 100%;
+        border-right: 1px solid #333;
+        z-index: 6;
+        backdrop-filter: blur(1rem);
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateX(-50vw);
+        transition: transform ease-in-out 0.4s;
+    }
+
+    .mobile-menu{
+        display:flex;
+    }
+
+
+}
