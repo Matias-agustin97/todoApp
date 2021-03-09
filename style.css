@@ -112,9 +112,10 @@ nav a{
 }
 .todo-list{
     width: 55vw;
-    height: 30vh;
+    height: auto;
     border-radius: 1rem;
     margin: 0 auto;
+    padding-bottom: 1rem;
     background-color: beige;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -123,24 +124,37 @@ nav a{
     height: 30px;
     position: relative;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 0rem;
 }
 .tododone{
+    background-color: #5bc0de;
     width: 6rem;
     height: 30px;
-    background-color: rosybrown;
     position: absolute;
     right: 7.4rem;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all ease-in-out 0.2s;
+}
+.tododone:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .tododelete{
+    background-color: #d9534f;
     width: 6rem;
     height: 30px;
     position: absolute;
     right: 1rem;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
+    font-weight: 900;
+    transition: all ease-in-out 0.2s;
+}
+.tododelete:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 

@@ -7,6 +7,8 @@ const todo= document.getElementById('todo')
 
 const todoList= document.getElementById('todo-list')
 
+const elementDelete= document.querySelectorAll('.tododelete')
+
 mobile.addEventListener('click',()=>{
     navBar.classList.toggle('nav-active')
     if(navBar.classList.contains('nav-active')){
@@ -41,3 +43,10 @@ todo.addEventListener('submit',(e)=>{
     todoBody.appendChild(todoDelete)
     todoList.appendChild(todoBody)
 })
+
+
+elementDelete.forEach((del)=>{
+    console.log('sd');
+    
+})
+console.log(elementDelete)
