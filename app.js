@@ -60,6 +60,8 @@ const lol=()=>{
         elem.addEventListener('click',(e)=>{
                 if(e.target.classList.contains('tododelete')){
                     elem.remove()
+                }else if(e.target.classList.contains('tododone')){
+                    elem.firstChild.style.textDecoration='line-through'
                 }
             
         })
