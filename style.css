@@ -112,27 +112,33 @@ nav a{
 }
 .todo-list{
     width: 55vw;
-    height: auto;
+    height:auto;
     border-radius: 1rem;
     margin: 0 auto;
-    padding-bottom: 1rem;
     background-color: beige;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .todobody{
-    height: 30px;
-    position: relative;
+    height: 80px;
+    display: flex;
     padding: 1rem;
-    margin: 1rem 0rem;
+}
+.todoParagraph{
+    width: 75%;
+    text-align: center;
+}
+.todoBtnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
 }
 .tododone{
     background-color: #5bc0de;
-    width: 6rem;
-    height: 30px;
-    position: absolute;
-    right: 7.4rem;
-    border-radius: 15px;
+    width: 100%;
+    height: 45%;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: 900;
@@ -143,11 +149,9 @@ nav a{
 }
 .tododelete{
     background-color: #d9534f;
-    width: 6rem;
-    height: 30px;
-    position: absolute;
-    right: 1rem;
-    border-radius: 15px;
+    width: 100%;
+    height: 45%;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: 900;
@@ -183,5 +187,10 @@ nav a{
         display:flex;
     }
 
-
+    .tododone, .tododelete{
+        width: 35%;
+        height: auto;
+        position: absolute;
+        right: 0;
+    }
 }

@@ -30,17 +30,23 @@ todo.addEventListener('submit',(e)=>{
     e.preventDefault()
     const todoBody= document.createElement('div')
     todoBody.classList.add('todobody')
-    const addTodoText= document.getElementById('add-todos')
-    todoBody.textContent= addTodoText.value
-    addTodoText.value=''
+    const todoParagraph = document.createElement('p')
+    todoParagraph.classList.add('todoParagraph')
+    const addTodo= document.getElementById('add-todos')
+    todoParagraph.textContent= addTodo.value
+    addTodo.value=''
+    const todoBtnContainer= document.createElement('div')
+    todoBtnContainer.classList.add('todoBtnContainer')
     const todoDone= document.createElement('button')
     todoDone.classList.add('tododone')
     todoDone.textContent='Done'
     const todoDelete= document.createElement('button')
     todoDelete.classList.add('tododelete')
     todoDelete.textContent='Delete'
-    todoBody.appendChild(todoDone)
-    todoBody.appendChild(todoDelete)
+    todoBtnContainer.appendChild(todoDone)
+    todoBtnContainer.appendChild(todoDelete)
+    todoBody.appendChild(todoParagraph)
+    todoBody.appendChild(todoBtnContainer)
     todoList.appendChild(todoBody)
 })
 
