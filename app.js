@@ -7,7 +7,6 @@ const todo= document.getElementById('todo')
 
 const todoList= document.getElementById('todo-list')
 
-const elementDelete= document.querySelectorAll('.tododelete')
 
 mobile.addEventListener('click',()=>{
     navBar.classList.toggle('nav-active')
@@ -23,9 +22,9 @@ mobile.addEventListener('click',()=>{
         bar3.classList.toggle('bar3-animation')
     }
 })
-
-
-
+let idDelete=0
+let todoBodies= document.querySelectorAll('.todobody')
+let  deleteBtn= document.querySelectorAll('tododelete')
 todo.addEventListener('submit',(e)=>{
     e.preventDefault()
     const todoBody= document.createElement('div')
@@ -42,17 +41,33 @@ todo.addEventListener('submit',(e)=>{
     todoDone.textContent='Done'
     const todoDelete= document.createElement('button')
     todoDelete.classList.add('tododelete')
+    todoDelete.setAttribute('coso', idDelete)
     todoDelete.textContent='Delete'
     todoBtnContainer.appendChild(todoDone)
     todoBtnContainer.appendChild(todoDelete)
     todoBody.appendChild(todoParagraph)
     todoBody.appendChild(todoBtnContainer)
     todoList.appendChild(todoBody)
+    todoBodies= document.querySelectorAll('.todobody')
+    deleteBtn= document.querySelectorAll('.tododelete')
+    lol()
+    idDelete++
 })
 
 
-elementDelete.forEach((del)=>{
-    console.log('sd');
-    
+const lol=()=>{
+    todoBodies.forEach(elem=>{
+        elem.addEventListener('click',(e)=>{
+                if(e.target.classList.contains('tododelete')){
+                    elem.remove()
+                }
+            
+        })
+    })
+}
+todoBodies.forEach(elem=>{
+    elem.addEventListener('click',(e)=>{
+            console.log(e.target);
+        
+    })
 })
-console.log(elementDelete)

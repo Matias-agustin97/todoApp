@@ -120,13 +120,16 @@ nav a{
 }
 
 .todobody{
-    height: 80px;
+    height: fit-content;
     display: flex;
     padding: 1rem;
 }
 .todoParagraph{
     width: 75%;
+    height: auto;
+    padding: 0.5rem;
     text-align: center;
+    word-break: break-all;
 }
 .todoBtnContainer{
     display: flex;
@@ -187,10 +190,10 @@ nav a{
         display:flex;
     }
 
-    .tododone, .tododelete{
+   .todoBtnContainer{
         width: 35%;
-        height: auto;
-        position: absolute;
-        right: 0;
-    }
+   }
+   .todoParagraph{
+       width: 65%;
+   }
 }
